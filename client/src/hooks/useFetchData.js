@@ -48,13 +48,15 @@ const useFetchData = (url) => {
         const res = await fetch(url, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        console.log(token);
+     
 
         const contentType = res.headers.get("content-type");
         let result;
         if (contentType && contentType.includes("application/json")) {
           result = await res.json();
         } else {
+         
+          console.log(contentType);
           throw new Error("Server returned unexpected response");
         }
 

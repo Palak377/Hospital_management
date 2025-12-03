@@ -2,7 +2,7 @@
 
 import { BsArrowRightCircle } from "react-icons/bs";
 
-const ServiceCard = ({ item, idx }) => {
+const ServiceCard = ({ item ,idx}) => {
   return (
     <div key={idx} className="py-[30px] px-3 lg:px-5">
       <h2 className="text-[26px] leading-9 text-headingColor font-[700]">

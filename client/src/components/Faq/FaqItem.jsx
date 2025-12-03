@@ -2,14 +2,14 @@
 import { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
-const FaqItem = ({item, key}) => {
+const FaqItem = ({item}) => {
   const [isOpen, setIsOpen] = useState(false);
   const toogleOpen = () => {
     if (!isOpen) setIsOpen(true);
     else setIsOpen(false);
   };
   return (
-    <div  className="p-3 lg:p-5 rounded-[12px] border border-solid border-[#D9DCE2] mb-5">
+    <div key ={item.id} className="p-3 lg:p-5 rounded-[12px] border border-solid border-[#D9DCE2] mb-5">
       <div
         className="flex justify-between items-center gap-5"
         onClick={toogleOpen}
